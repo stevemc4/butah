@@ -5,9 +5,10 @@ module.exports = {
     node: true
   },
   extends: [
-    'standard',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'standard'
   ],
   globals: {
     Atomics: 'readonly',
@@ -15,10 +16,14 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
     ecmaVersion: 2018,
     sourceType: 'module'
   },
   plugins: [
+    'react',
     '@typescript-eslint'
   ],
   rules: {
