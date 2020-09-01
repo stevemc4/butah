@@ -10,7 +10,7 @@ export default function Index (): ReactElement {
   })
 
   const updateTime = (): void => {
-    const target = new Date('27 August 2020 UTC+0700')
+    const target = new Date('15 September 2020 23:59 UTC+0700')
     const { days, hours, minutes, seconds } = intervalToDuration({
       start: new Date(),
       end: target
